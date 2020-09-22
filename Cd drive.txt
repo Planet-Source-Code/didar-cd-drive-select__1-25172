@@ -1,0 +1,18 @@
+Private Sub Command1_Click()
+On Error GoTo error
+Dim x, y As Variant
+x = Drive1.ListCount
+y = x + 65
+Text1.Text = Chr(y)
+Drive1.Drive = Text1.Text
+Dir1.Path = Drive1.Drive
+Dir1.Path = "\movie"
+mov.filename = Dir1.Path & "\cd iub4(SOUND).dat"
+Exit Sub
+error:
+MsgBox "Please Insert The CD Rom..", 16, "No Cd Device"
+End Sub
+
+Private Sub Command2_Click()
+Text1.Text = Drive1.ListCount
+End Sub
